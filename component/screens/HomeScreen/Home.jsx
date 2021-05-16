@@ -6,7 +6,7 @@ export  function Home({navigation}) {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
-                <Image source= {require('../../assets/ampersand.png')} style={{
+                <Image source= {require('../../../assets/ampersand.png')} style={{
                     width: 200,
                     height: 50,
                     tintColor:'#0000',
