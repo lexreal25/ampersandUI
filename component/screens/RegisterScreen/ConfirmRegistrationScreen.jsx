@@ -13,7 +13,7 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 
-export function RegisterScreen({navigation}) {
+export function ConfirmRegistrationScreen({navigation,route}) {
   const [image, setImage] = useState(null);
 
   //userEffect works like componentDidMount in "class component"
@@ -43,7 +43,11 @@ export function RegisterScreen({navigation}) {
     }
   };
 
+  //receiving params
+  // const {fullName, email, number, role, twitter, linkedin} = route.params
+
   return (
+
     <SafeAreaView style={{ flex: 1, backgroundColor:'#ffff' }}>
       <View style={{ flex: 1 }}>
         {/* TopNav */}
@@ -76,14 +80,8 @@ export function RegisterScreen({navigation}) {
               zIndex: 1,
             }}
           >
-            <AntDesign
-              name="user"
-              size={40}
-              color="red"
-              style={{ alignSelf: "center" }}
-            />
-            <Text style={{ color: "red", width: 140, marginVertical: 5 }}>
-              ADD PROFILE PHOTO
+            <Text style={{ color: "#ffff", width: 140, marginVertical: 5, borderWidth: 1, borderColor:'#ffff' }}>
+              EDIT PROFILE PHOTO
             </Text>
           </View>
           <Image
@@ -98,12 +96,14 @@ export function RegisterScreen({navigation}) {
                     <label>Others</label>
                     <TextInput 
                         style={styles.textInput}
+                        //value={fullName}
                     />
                 </View>
                 <View style={styles.inputContainer}>
                     <label>Email</label>
                     <TextInput
                         style={styles.textInput}
+                        //value={email}
                     />
                 </View>
                 <View style={styles.inputContainer}>
@@ -111,31 +111,36 @@ export function RegisterScreen({navigation}) {
                     <TextInput 
                         keyboardType='number-pad'
                         style={styles.textInput}
+                        //value={number}
                     />
                 </View>
                 <View style={styles.inputContainer}>
                     <label>Role</label>
                     <TextInput 
                         style={styles.textInput}
+                       // value={role}
                     />
                 </View>
                 <View style={styles.inputContainer}>
                     <label >Twitter</label>
                     <TextInput 
                         style={styles.textInput}
+                        //value={twitter}
                     />
                 </View>
                 <View style={styles.inputContainer}>
                     <label >LinkedIn</label>
-                    <TextInput underlineColorAndroid="rgba(0,0,0,0)" style={styles.textInput}/>
+                    <TextInput 
+                        underlineColorAndroid="rgba(0,0,0,0)" 
+                        style={styles.textInput}
+                        //value={linkedin}
+                    />
                 </View>
             </ScrollView>
         </View>
-        <TouchableOpacity style={styles.register}
-          onPress={() => navigation.navigate("ConfirmRegistration")}
-        >
+        <TouchableOpacity style={styles.register}>
           <Text style={{ fontSize: 18, color: "#f7f7f7", letterSpacing: 0.5 }}>
-            REGISTER
+            SUBMIT
           </Text>
         </TouchableOpacity>
       </View>

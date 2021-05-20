@@ -9,6 +9,7 @@ import { Welcome} from './component/screens/HomeScreen/Welcome'
 import { LoginScreen} from './component/screens/LoginScreen/LoginScreen'
 import { ResetPassword } from './component/screens/LoginScreen/ResetPassword'
 import { RegisterScreen} from './component/screens/RegisterScreen/RegisterScreen'
+import { ConfirmRegistrationScreen } from './component/screens/RegisterScreen/ConfirmRegistrationScreen';
 
 
 const Stack = createStackNavigator()
@@ -17,10 +18,12 @@ export default function App() {
   return (
     <NavigationContainer style={styles.container}  >
       <Stack.Navigator headerMode={false} >
-        <Stack.Screen name='Register' component={RegisterScreen}/>
+        
         <Stack.Screen name='Home' component={Home}/>
         <Stack.Screen name='Welcome' component={Welcome}/>
         <Stack.Screen name='Login' component={LoginScreen}/>
+        <Stack.Screen name='Register' component={RegisterScreen}/>
+        <Stack.Screen name='ConfirmRegistration' component={ConfirmRegistrationScreen} />
         <Stack.Screen name='ResetPassword' component={ResetPassword}/>
       </Stack.Navigator>
     </NavigationContainer>
