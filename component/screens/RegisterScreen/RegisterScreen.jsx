@@ -92,6 +92,7 @@ export function RegisterScreen({navigation}) {
             resizeMode="cover"
           />
         </TouchableOpacity>
+        
         <View style={{ flex: 0.4, flexDirection:'column', marginVertical: 30, marginHorizontal: 10 }}>
             <ScrollView showsHorizontalScrollIndicator={false}>
                 <View style={styles.inputContainer}>
