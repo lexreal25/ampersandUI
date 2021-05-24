@@ -12,6 +12,8 @@ import { RegisterScreen} from './component/screens/RegisterScreen/RegisterScreen
 import { ConfirmRegistrationScreen } from './component/screens/RegisterScreen/ConfirmRegistrationScreen';
 import { QRCode } from './component/screens/HomeScreen/QRCode';
 import { BarCode } from './component/screens/HomeScreen/BarCode';
+import MemberProfile from './component/screens/MemberScreen/MemberProfile';
+import MyProfile from './component/screens/MemberScreen/MyProfile';
 
 
 const Stack = createStackNavigator()
@@ -20,6 +22,8 @@ export default function App() {
   return (
     <NavigationContainer style={styles.container}  >
       <Stack.Navigator headerMode={false} >
+        <Stack.Screen name='MyProfile' component={MyProfile} />
+        <Stack.Screen name='Member' component={MemberProfile} />
         <Stack.Screen name='BarCode' component={BarCode} />
         <Stack.Screen name='QRCode' component={QRCode} />
         <Stack.Screen name='Home' component={Home}/>
