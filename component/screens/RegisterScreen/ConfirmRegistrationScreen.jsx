@@ -13,6 +13,8 @@ import {
 import { AntDesign } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 
+
+
 export function ConfirmRegistrationScreen({navigation,route}) {
   const [image, setImage] = useState(null);
 
@@ -138,7 +140,7 @@ export function ConfirmRegistrationScreen({navigation,route}) {
                 </View>
             </ScrollView>
         </View>
-        <TouchableOpacity style={styles.register}>
+        <TouchableOpacity style={styles.register} onPress={() => navigation.navigate("BarCode")}>
           <Text style={{ fontSize: 18, color: "#f7f7f7", letterSpacing: 0.5 }}>
             SUBMIT
           </Text>

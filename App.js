@@ -22,16 +22,16 @@ export default function App() {
   return (
     <NavigationContainer style={styles.container}  >
       <Stack.Navigator headerMode={false} >
-        <Stack.Screen name='MyProfile' component={MyProfile} />
-        <Stack.Screen name='Member' component={MemberProfile} />
-        <Stack.Screen name='BarCode' component={BarCode} />
-        <Stack.Screen name='QRCode' component={QRCode} />
         <Stack.Screen name='Home' component={Home}/>
         <Stack.Screen name='Welcome' component={Welcome}/>
         <Stack.Screen name='Login' component={LoginScreen}/>
         <Stack.Screen name='Register' component={RegisterScreen}/>
         <Stack.Screen name='ConfirmRegistration' component={ConfirmRegistrationScreen} />
         <Stack.Screen name='ResetPassword' component={ResetPassword}/>
+        <Stack.Screen name='BarCode' component={BarCode} />
+        <Stack.Screen name='QRCode' component={QRCode} />
+        <Stack.Screen name='Member' component={MemberProfile} />
+        <Stack.Screen name='MyProfile' component={MyProfile} />
       </Stack.Navigator>
     </NavigationContainer>
   );

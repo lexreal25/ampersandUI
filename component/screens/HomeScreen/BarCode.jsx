@@ -124,6 +124,7 @@ export  class BarCode extends Component {
                     width: 75,
                     alignItems: "center",
                   }}
+                  onPress={() => this.props.navigation.navigate("QRCode") }
                 >
                   <Text style={{ color: "red" }}>Scan QR</Text>
                 </TouchableOpacity>
